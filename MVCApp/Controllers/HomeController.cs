@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MVCApp.Models.Home;
 
 namespace MVCApp.Controllers
 {
@@ -6,7 +7,12 @@ namespace MVCApp.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var model = new HomeModel
+            {
+                Text123 = "qqqqqqqqqqqqq"
+            };
+
+            return View(model);
         }
 
         public void Action1()
