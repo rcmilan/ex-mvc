@@ -7,24 +7,18 @@ namespace MVCApp.Controllers
     {
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Action2(string parameter123)
+        {
             var model = new HomeModel
             {
-                Text123 = "qqqqqqqqqqqqq"
+                LabelA = "aaaaaaaaaaaaaaaaaaaaaaa",
+                LabelB = parameter123
             };
 
-            return View(model);
-        }
-
-        public void Action1()
-        {
-            var x = "aaaaaaa";
-
-            x = "bbb";
-        }
-
-        public void Action2(string parameter123)
-        {
-            parameter123 = "bbb";
+            return View("Index", model);
         }
     }
 }

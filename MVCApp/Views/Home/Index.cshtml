@@ -1,10 +1,24 @@
-﻿@Model Models.Home.HomeView
+﻿@model MVCApp.Models.Home.HomeModel
 @{
-    <div>Hello World</div>
-
-    <a type="button" href="@Url.Action("Action1","Home")">Click</a>
-
-    <a href="@Url.Action("Action2","Home", new{ parameter123 = "value"})">Click 123</a>
-
-    @Model.Text123
+    ViewData["Title"] = "Home";
 }
+
+<div>Hello World</div>
+
+<a href="@Url.Action("Action2", "Home", new{ parameter123 = "value value value value value"})">Click Redirect</a>
+
+<p>
+    @Html.DisplayNameFor(m => m.LabelA)
+</p>
+
+<p>
+    @Html.DisplayFor(m => m.LabelA)
+</p>
+
+<p>
+    @Html.DisplayNameFor(m => m.LabelB)
+</p>
+
+<p>
+    @Html.DisplayFor(m => m.LabelB)
+</p>

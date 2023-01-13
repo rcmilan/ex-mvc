@@ -2,6 +2,7 @@
 {
     public class HomeModel
     {
-        public string Text123 { get; set; }
+        public string LabelA { get; set; } = default!;
+        public string LabelB { get; set; } = default!;
     }
 }
