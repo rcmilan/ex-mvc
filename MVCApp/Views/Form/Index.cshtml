@@ -1,0 +1,30 @@
+﻿@model MVCApp.Models.Form.FormModel
+@{
+    ViewData["Title"] = "Form";
+}
+
+<h1>Form</h1>
+
+@using (Html.BeginForm("FormSubmit", "Form", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.LabelFor(m => m.UserNumber)
+        @Html.EditorFor(m => m.UserNumber)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.EditorFor(m => m.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Date)
+        @Html.EditorFor(m => m.Date)
+    </div>
+
+    <div>
+        <input type="submit" value="Enviar!!!" />
+    </div>
+}
